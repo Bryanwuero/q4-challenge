@@ -2,6 +2,9 @@
 
 ## Front-end Developer Assessment Bryan 
 
+### Final Design
+<img width="1488" alt="Screen Shot 2022-07-02 at 13 37 37" src="https://user-images.githubusercontent.com/5296954/177012616-9eefc609-b968-4518-b02c-9a94d0ff782f.png">
+
 ### JS 
 - For some reason the main js files could not load the HTML template, had to manually import the template directly to to HTML 
 s
@@ -12,6 +15,9 @@ s
 - Added missing mustaches
 - Tried to use flex box for responsiveness, but went with display grid to handle break points
 
+_____________________________________________________________________________________________________________________________________________
+
+# To Do
 ## Front-end Developer Assessment
 
 Welcome to the front-end developer assessment package.
