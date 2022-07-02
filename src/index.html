@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link href="css/main.css" type="text/css" rel="stylesheet" media="screen">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-    </head>
+</head>
+
 <body id="q4Wrapper">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
 
@@ -22,14 +23,15 @@
             <section class="layout_container">
                 <div class="reports" id="anual_reports">
                 </div>
-                </section>
-                </div>
-                </main>
+            </section>
+            </div>
+            </main>
 
     <!-- <script type="text/mustache" src="./js/main.js"></script>
-                <script type="text/javascript" src="./js/libraries.js"></script>
-                <script type="text/javascript" src="./js/dataset.js"></script> -->
-    
+    <script type="text/javascript" src="./js/libraries.js"></script>
+    <script type="text/mustache" src="./js/dataset.js"></script> -->
+
+    <!-- Load Mustache template direct in html for some reason the script could not load -->
     <script type="mustache/x-tmpl" id="template">
                     {{#.}}
                         <article class="reports_item">
@@ -180,7 +182,7 @@
                         title: "2013 Proxy Statement",
                     },
                 ],
-            }
+            },
         ];
 
         var tmp1 = document.getElementById('template').innerHTML

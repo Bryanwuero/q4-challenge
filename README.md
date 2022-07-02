@@ -1,5 +1,15 @@
 # [Q4 Inc.](https://q4inc.com/)
 
+## Front-end Developer Assessment Comments
+
+### Chanllengues 
+- For some reason the main js files could not load the HTML template, had to manually import the template directly to to HTML 
+s
+### Styles
+- Added rest of classes and Id to HTML
+- Added missing mustaches
+- Tried to use flex box for responsiveness, but went with  grid to handle break points.
+
 ## Front-end Developer Assessment
 
 Welcome to the front-end developer assessment package.
