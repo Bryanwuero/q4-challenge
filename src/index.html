@@ -1,29 +1,195 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <title>Front-end Developer Assessment</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+<head>
+    <meta charset="utf-8">
+    <title>Front-end Developer Assessment</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="css/main.css" type="text/css" rel="stylesheet" media="screen">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     </head>
-    <body>
-        <main class="layout">
-            <div class="layout_inner">
-                <header class="layout_header">
-                    <h1 class="layout_title">Annual reports</h1>
-                </header>
-                <section class="layout_container">
-                    <div class="reports"></div>
-                </section>
-            </div>
-        </main>
+<body id="q4Wrapper">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
 
-        <script src="js/libraries.js"></script>
-        <script src="js/dataset.js"></script>
-        <script src="js/main.js"></script>
+    <main class="layout">
+        <div class="layout_inner">
+            <header class="layout_header">
+                <h1 class="layout_title">Annual reports</h1>
+            </header>
+            <section class="layout_container">
+                <div class="reports" id="anual_reports">
+                </div>
+                </section>
+                </div>
+                </main>
+
+    <!-- <script type="text/mustache" src="./js/main.js"></script>
+                <script type="text/javascript" src="./js/libraries.js"></script>
+                <script type="text/javascript" src="./js/dataset.js"></script> -->
+    
+    <script type="mustache/x-tmpl" id="template">
+                    {{#.}}
+                        <article class="reports_item">
+                            <a href="{{cover}}" target="_blank">
+                                <img class="reports_cover" src="{{cover}}" alt="{{title}} Cover" />
+                            </a>
+                            <footer class="reports_docs">
+                                {{#documents}}
+                                <h3 class="reports_title">
+                                    <a href="{{url}}" target="_blank">{{title}} <span>({{file_size}} {{file_type}}) </span></a>
+                                </h3>
+                                {{/documents}}
+                            </footer>
+                        </article>
+                    {{/.}}
+                </script>
+    <script>
+        var data = [
+            {
+                cover: "images/cover1.jpg",
+                type: "Annual Report",
+                title: "2019 Annual Report",
+                documents: [
+                    {
+                        file_size: "16 KB",
+                        file_type: "PDF",
+                        url: "files/test.pdf",
+                        title: "2019 Annual Report",
+                    },
+                    {
+                        file_size: "7 KB",
+                        file_type: "PDF",
+                        url: "files/test.pdf",
+                        title: "2019 Proxy Statement",
+                    },
+                ],
+            },
+            {
+                cover: "images/cover2.jpg",
+                type: "Annual Report",
+                title: "2018 Annual Report",
+                documents: [
+                    {
+                        file_size: "16 KB",
+                        file_type: "PDF",
+                        url: "files/test.pdf",
+                        title: "2018 Annual Report",
+                    },
+                    {
+                        file_size: "7 KB",
+                        file_type: "PDF",
+                        url: "files/test.pdf",
+                        title: "2018 Proxy Statement",
+                    },
+                ],
+            },
+            {
+                cover: "images/cover3.jpg",
+                type: "Annual Report",
+                title: "2017 Annual Report",
+                documents: [
+                    {
+                        file_size: "16 KB",
+                        file_type: "PDF",
+                        url: "files/test.pdf",
+                        title: "2017 Annual Report",
+                    },
+                    {
+                        file_size: "7 KB",
+                        file_type: "PDF",
+                        url: "files/test.pdf",
+                        title: "2017 Proxy Statement",
+                    },
+                ],
+            },
+            {
+                cover: "images/cover1.jpg",
+                type: "Annual Report",
+                title: "2016 Annual Report",
+                documents: [
+                    {
+                        file_size: "16 KB",
+                        file_type: "PDF",
+                        url: "files/test.pdf",
+                        title: "2016 Annual Report",
+                    },
+                    {
+                        file_size: "7 KB",
+                        file_type: "PDF",
+                        url: "files/test.pdf",
+                        title: "2016 Proxy Statement",
+                    },
+                ],
+            },
+            {
+                cover: "images/cover2.jpg",
+                type: "Annual Report",
+                title: "2015 Annual Report",
+                documents: [
+                    {
+                        file_size: "16 KB",
+                        file_type: "PDF",
+                        url: "files/test.pdf",
+                        title: "2015 Annual Report",
+                    },
+                    {
+                        file_size: "7 KB",
+                        file_type: "PDF",
+                        url: "files/test.pdf",
+                        title: "2015 Proxy Statement",
+                    },
+                ],
+            },
+            {
+                cover: "images/cover3.jpg",
+                type: "Annual Report",
+                title: "2014 Annual Report",
+                documents: [
+                    {
+                        file_size: "16 KB",
+                        file_type: "PDF",
+                        url: "files/test.pdf",
+                        title: "2014 Annual Report",
+                    },
+                    {
+                        file_size: "7 KB",
+                        file_type: "PDF",
+                        url: "files/test.pdf",
+                        title: "2014 Proxy Statement",
+                    },
+                ],
+            },
+            {
+                cover: "images/cover1.jpg",
+                type: "Annual Report",
+                title: "2013 Annual Report",
+                documents: [
+                    {
+                        file_size: "16 KB",
+                        file_type: "PDF",
+                        url: "files/test.pdf",
+                        title: "2013 Annual Report",
+                    },
+                    {
+                        file_size: "7 KB",
+                        file_type: "PDF",
+                        url: "files/test.pdf",
+                        title: "2013 Proxy Statement",
+                    },
+                ],
+            }
+        ];
+
+        var tmp1 = document.getElementById('template').innerHTML
+        var html = Mustache.render(tmp1, data)
+        var box = document.getElementById('anual_reports')
+
+        box.innerHTML = html
+
+    </script>
     </body>
+
 </html>
